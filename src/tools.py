@@ -43,9 +43,20 @@ TOOLS_SCHEMA = [
         "parameters": {
             "type": "object",
             "properties": {
-                # TODO 1.2: Khai báo các thuộc tính tham số cho Tool tại đây...
+                "student_id": {
+                    "type": "string",
+                    "description": "Mã sinh viên cần đặt lịch hẹn (ví dụ: 'SV2026001')"
+                },
+                "datetime_str": {
+                    "type": "string",
+                    "description": "Thời gian hẹn tư vấn (ví dụ: '09:00 20/09/2026' hoặc '14:00 22/09/2026')"
+                },
+                "advisor_name": {
+                    "type": "string",
+                    "description": "Tên Cố vấn học tập được hẹn gặp (ví dụ: 'TS. Lê Thị B', 'PGS.TS Nguyễn Văn A')"
+                }
             },
-            "required": [] # TODO 1.2: Khai báo danh sách các trường bắt buộc tại đây...
+            "required": ["student_id", "datetime_str"]
         }
     }
 ]
